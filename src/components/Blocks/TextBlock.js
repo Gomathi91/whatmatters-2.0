@@ -5,7 +5,7 @@ export default function TextBlock({ data }) {
   const text = data?.text || data?.content || data?.description || "";
 
   return (
-    <section className="py-5">
+    <section className="textblock-section">
       <div className="container">
         <div className="mx-auto text-center fulltext-content" style={{ maxWidth: "750px" }}>
           <ReactMarkdown>

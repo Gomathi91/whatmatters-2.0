@@ -9,6 +9,7 @@ import {
 import ImageBlock from '@/components/Blocks/ImageBlock';
 import TextImageBlock from '@/components/Blocks/ImageTextBlock';
 import FullWidthTextBlock from '@/components/Blocks/TextBlock';
+import ThreeGridBlock from '@/components/Blocks/ThreeGridBlock';
 
 function BlockRenderer({ block }) {
   const contentType = block.sys.contentType?.sys?.id;
@@ -21,6 +22,8 @@ function BlockRenderer({ block }) {
       return <TextImageBlock data={block.fields} />;
     case 'fullWidthTextBlock':
       return <FullWidthTextBlock data={block.fields} />;
+    case 'storiesListingBlock':
+      return <ThreeGridBlock data={block.fields} />;
     default:
       return null;
   }

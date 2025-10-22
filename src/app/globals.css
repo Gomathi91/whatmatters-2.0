@@ -63,4 +63,55 @@ p{
     margin-left: 20px;
     font-style: "Font Awesome 6 Free";
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.imageblock-section{
+    margin-bottom: 50px;
+}
+
+.imagetextblock-section{
+    margin-bottom: 50px;
+}
+
+.textblock-section{
+    margin-bottom: 50px;
+}
+
+.threegridblock-section{
+    margin-bottom: 50px;
+}
+
+.card.hover-lift {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 180px;
+    width: 100%;
+}
+
+.card-body {
+    padding: 20px !important;
+}
+
+.card-text{
+    color: #635958;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.card-title{
+    color: #e23123 !important;
+    font-family: "PT serif Regular", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 10px !important;
 }
