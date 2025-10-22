@@ -1,0 +1,66 @@
+body {
+  font-family: "Berthold Regular", Arial, sans-serif;
+  color: #222;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Berthold Medium-Extended", Arial, sans-serif;
+}
+
+p, li, blockquote {
+  font-family: "PT serif Regular", Georgia, serif;
+}
+
+
+
+.homepage-subtitle {
+  font-family: "PT serif Italic";
+  font-size: 1.2rem;
+  color: #666;
+}
+
+
+.fulltext-content{
+    font-size: 30px !important;
+    margin: 0 !important;
+    font-weight: normal;
+    line-height: 77px !important;
+}
+
+.imgtext-block-para{
+    font-size: 1.5rem;
+    font-weight:normal;
+    line-height: 1.7;
+    color:#b7adac;     
+}
+
+.imgtext-title{
+    color:#e23123 !important;
+    font-size:34px;
+}
+
+h1{
+    font-size:68px !important;
+    color: #030000 !important;
+}
+
+p{
+    font-size: 34px;
+    line-height: 44px;
+    color: #9E9494;
+    margin-top: 6px;
+}
+
+
+.heading{
+    display: inline-block;
+    padding: 10px 0;
+    color: #e23123;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    font-style: "Font Awesome 6 Free";
+    margin-top: 20px;
+}
