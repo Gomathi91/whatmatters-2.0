@@ -9,10 +9,10 @@ export async function GET(request) {
 
   // If secret is invalid or missing slug, redirect to Home (published mode)
   if (secret !== PREVIEW_SECRET || !slug) {
-    redirect("/home");
+    redirect("/");
     return;
   }
 
   // Valid secret
-  redirect(`/home?preview=true&slug=${slug}`);
+  redirect(`/${slug}?preview=true&slug=${slug}`);
 }
