@@ -5,8 +5,10 @@ export async function GET(request) {
   const secret = searchParams.get("secret");
   const slug = searchParams.get("slug");
 
+  const PREVIEW_SECRET = process.env.CONTENTFUL_PREVIEW_SECRET
+
   // If secret is invalid or missing slug, redirect to Home (published mode)
-  if (secret !== "testing" || !slug) {
+  if (secret !== PREVIEW_SECRET || !slug) {
     redirect("/home");
     return;
   }
