@@ -7,7 +7,7 @@ export default function ImageTextBlock({ data }) {
   const text = data?.text || data?.description || data?.content;
 
   return (
-    <section className="imagetextblock-section bg-light">
+    <section className="imagetextblock-section py-5 bg-light">
       <div className="container">
         <div className="row align-items-center">
 
