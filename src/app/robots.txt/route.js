@@ -1,5 +1,6 @@
 export async function GET() {
-  const isProd = process.env.NODE_ENV === "production";
+//   const isProd = process.env.NODE_ENV === "production";
+const isProd ="";
 
   const content = isProd
     ? `User-agent: *
