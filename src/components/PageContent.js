@@ -40,9 +40,6 @@ export default function PageContent({ post, isPreview }) {
       enableInspectorMode={isPreview}
     >
       <div {...inspectorProps({ fieldId: 'title' })}>
-        <div>
-          <a className="heading">What Matters</a>
-        </div>
         {updatedPost.fields.pageBlocks?.map((block, index) => (
           <BlockRenderer key={block.sys.id || index} block={block} />
         ))}
