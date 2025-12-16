@@ -33,23 +33,23 @@ export default async function Page({ searchParams }) {
 
   return (
     <>
-      <div>
-        <a href="/" className="heading">
-          {imageUrl ? (
-            <img
-              src={`https:${imageUrl}`}
-              alt={imageTitle}
-              className="img-fluid"
-              style={{ width: '200px', objectFit: 'cover' }}
-            />
-          ) : (
-            <div className="text-center" style={{ color: "var(--bs-red)" }}>
-              {siteSettings?.title}
-            </div>
-          )}
-        </a>
-      </div>
-
+      <header>
+        <div className="container">
+          <a href="/" className="heading">
+            {imageUrl ? (
+              <img
+                src={`https:${imageUrl}`}
+                alt={imageTitle}
+                className="img-fluid w-100"
+              />
+            ) : (
+              <div className="text-center" style={{ color: "var(--bs-red)" }}>
+                {siteSettings?.title}
+              </div>
+            )}
+          </a>
+        </div>
+      </header>
       <PageContent post={posts[0]} isPreview={isPreview} />
     </>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function ImageTextBlock({ data }) {
   const imageUrl = data?.image?.fields?.file?.url;
@@ -7,17 +8,9 @@ export default function ImageTextBlock({ data }) {
   const text = data?.text || data?.description || data?.content;
 
   return (
-    <section className="imagetextblock-section py-5 bg-light">
-      <div className="container">
+    <section className="imagetextblock-section py-5">
+      <div>
         <div className="row align-items-center">
-
-        {/* Text */}
-          <div className="col-md-6">
-            {title && <h2 className="imgtext-title">{title}</h2>}
-            <p className="imgtext-block-para">
-              {text || "No text content available."}
-            </p>
-          </div>
 
           {/* Image */}
           <div className="col-md-6 mb-4 mb-md-0">
@@ -34,6 +27,19 @@ export default function ImageTextBlock({ data }) {
               <div className="bg-light text-center text-muted rounded-4">
                 No Image Available
               </div>
+            )}
+          </div>
+
+          {/* Text */}
+          <div className="col-md-6 text-wrapper">
+            {title && <h2 className="imgtext-title">{title}</h2>}
+            <p className="imgtext-block-para">
+              {text || "No text content available."}
+            </p>
+            {data?.buttonUrl && (
+              <Link href={data.buttonUrl} className="btn">
+                {data.buttonLabel}
+              </Link>
             )}
           </div>
 

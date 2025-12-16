@@ -1,15 +1,45 @@
+:root {
+    --sans: "Dia", sans-serif;
+    --serif: "Financier", serif;
+    --blue: #0377d4;
+    --light-blue: #eef5fb;
+}
+@font-face{
+    font-family:Financier;
+    font-weight:400;
+    font-style:normal;
+    src: url(../../public/fonts/FinancierTextWeb-Regular.woff) format("woff")
+}
+@font-face{
+    font-family:Financier;
+    font-weight:600;
+    font-style:italic;
+    src: url(../../public/fonts/FinancierTextWeb-MediumItalic.woff) format("woff")
+}
+@font-face{
+    font-family:Dia;
+    font-weight:400;
+    font-style:normal;
+    src:url(../../public/fonts/Dia-Regular.woff) format("woff")
+}
+@font-face{
+    font-family:Dia;
+    font-weight:700;
+    font-style:normal;
+    src:url(../../public/fonts/Dia-Bold.woff) format("woff")
+}
 body {
-  font-family: "Berthold Regular", Arial, sans-serif;
+  font-family: var(--sans);
   color: #222;
   background-color: #fff;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Berthold Medium-Extended", Arial, sans-serif;
+  font-family: var(--serif);
 }
 
 p, li, blockquote {
-  font-family: "PT serif Regular", Georgia, serif;
+  font-family: var(--sans);
 }
 
 
@@ -17,7 +47,6 @@ p, li, blockquote {
 .homepage-subtitle {
   font-family: "PT serif Italic";
   font-size: 1.2rem;
-  color: #666;
 }
 
 
@@ -29,26 +58,24 @@ p, li, blockquote {
 }
 
 .imgtext-block-para{
-    font-size: 1.5rem;
+    font-size: 21px;
     font-weight:normal;
-    line-height: 1.7;
-    color:#b7adac;     
+    line-height: 27px;   
 }
 
 .imgtext-title{
-    color:#e23123 !important;
-    font-size:34px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1;
 }
 
 h1{
     font-size:68px !important;
-    color: #030000 !important;
 }
 
 p{
     font-size: 34px;
     line-height: 44px;
-    color: #9E9494;
     margin-top: 6px;
 }
 
@@ -56,62 +83,126 @@ p{
 .heading{
     display: inline-block;
     padding: 10px 0;
-    color: #e23123;
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
-    margin-left: 20px;
     font-style: "Font Awesome 6 Free";
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.imageblock-section{
-    margin-bottom: 50px;
+header .heading img{
+    max-width: 200px;
+    object-fit: cover;
 }
 
 .imagetextblock-section{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.imagetextblock-section .btn {        
+    padding: 0;
+    padding-bottom: 2px;
+    font-family: var(--sans);
+    font-weight: 700;
+    border-bottom: 2px solid var(--blue);
+    border-radius: 0;
+    text-transform: uppercase;
 }
 
 .textblock-section{
-    margin-bottom: 50px;
+    background-color: var(--blue);
+    color: #fff;
+}
+
+.textblock-section h2{
+    font-family: var(--sans);
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.textblock-section p{
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: normal;
+}
+
+.textblock-section .btn {
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 0;
 }
 
 .threegridblock-section{
     margin-bottom: 50px;
+    background-color: var(--light-blue);
 }
 
 .card.hover-lift {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card.hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border: none;
+    padding: 20px 16px;
+    gap: 16px;
 }
 
 .card-img-top {
     object-fit: cover;
-    height: 180px;
+    max-height: 250px;
     width: 100%;
 }
 
 .card-body {
-    padding: 20px !important;
+    padding: 0px !important;
+    gap: 16px;
 }
 
 .card-text{
-    color: #635958;
     margin-bottom: 0;
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 28px;
+    font-weight: 700;
 }
 
 .card-title{
-    color: #e23123 !important;
-    font-family: "PT serif Regular", Georgia, serif;
-    font-size: 18px;
-    line-height: 1.4;
-    margin: 0 0 10px !important;
+    color: #000 !important;
+    font-size: 28px;
+    line-height: 33.6px;
+    margin: 0 0 16px !important;
+}
+
+.card-date {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: var(--sans);
+}
+
+@media (min-width: 768px) {
+
+    .imagetextblock-section .row {
+        margin-right: 0;
+    } 
+
+    .imagetextblock-section .text-wrapper {
+        width: 41%;
+    }
+    
+}
+
+@media (max-width: 767.98px) {
+
+    .container, .container-sm {
+        max-width: unset !important;
+    }
+
+    .imagetextblock-section .row {
+        margin-left: 0;
+        margin-right: 0;
+    } 
+    
 }
